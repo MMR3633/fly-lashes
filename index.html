@@ -26,17 +26,15 @@
   section{scroll-margin-top:84px}
   a{color:inherit}
   a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:8px}
-  /* зерно для премиум-текстуры */
+
   .grain{position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
   h1,h2,h3{font-family:'Cormorant Garamond',serif}
   .wrap{max-width:1200px;margin:0 auto}
 
-  /* ---------- reveal on scroll (только при JS, иначе контент виден) ---------- */
   html.js [data-rv]{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
   html.js [data-rv].in{opacity:1;transform:none}
 
-  /* ---------- nav ---------- */
   nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;
     padding:15px 40px;background:rgba(253,244,240,.7);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
     border-bottom:1px solid rgba(201,162,75,.28)}
@@ -60,10 +58,9 @@
   .mobile-menu a{text-decoration:none;color:var(--ink);font-weight:500;padding:13px 0;border-bottom:1px solid rgba(110,42,72,.08)}
   @media(max-width:820px){.nav-links{display:none}.burger{display:flex}}
 
-  /* ---------- hero ---------- */
   .hero{position:relative;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;align-items:center;
     justify-content:center;text-align:center;padding:120px 24px 80px;overflow:hidden}
-  /* мягкий стык героя со следующей секцией */
+
   .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;z-index:1;pointer-events:none;
     background:linear-gradient(to bottom,transparent,var(--ivory))}
   .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
@@ -105,7 +102,6 @@
   .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;color:var(--plum);opacity:.5;animation:bobcue 2.2s ease-in-out infinite}
   @keyframes bobcue{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
 
-  /* ---------- sections ---------- */
   .sec{padding:90px 40px}
   .sec-head{text-align:center;max-width:660px;margin:0 auto 54px}
   .kicker{text-transform:uppercase;letter-spacing:.22em;font-size:13px;font-weight:600;color:var(--gold);margin:0}
@@ -113,7 +109,6 @@
   .sec-head h2::after{content:"";display:block;width:56px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:20px auto 0}
   .sec-head p{font-size:16px;color:var(--ink);opacity:.75;margin:14px 0 0}
 
-  /* services */
   .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
   .card{background:#fff;border:1px solid rgba(201,162,75,.2);border-radius:22px;padding:34px;
     box-shadow:0 6px 22px rgba(110,42,72,.05);transition:transform .3s,box-shadow .3s}
@@ -131,7 +126,6 @@
     border:1.5px solid var(--gold);padding:13px 26px;border-radius:999px;transition:transform .2s}
   .card-cta .mini:hover{transform:translateY(-2px)}
 
-  /* gallery */
   .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
   .gal{position:relative;aspect-ratio:3/4;border-radius:18px;overflow:hidden;cursor:pointer;
     box-shadow:0 6px 20px rgba(110,42,72,.08);transition:transform .3s}
@@ -145,7 +139,6 @@
   .gal:hover .ph-ic{transform:scale(1.12) rotate(8deg)}
   .gal .ph-ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(20,12,18,.18));z-index:1}
 
-  /* why */
   .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
   .why{background:#fff;border:1px solid rgba(201,162,75,.2);border-radius:22px;padding:32px;text-align:center;box-shadow:0 6px 22px rgba(110,42,72,.05)}
   .why .ic{width:64px;height:64px;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--rose-soft)}
@@ -153,7 +146,6 @@
   .why .lbl{font-weight:600;margin:6px 0 4px}
   .why .small{font-size:14px;color:var(--ink);opacity:.7;margin:0}
 
-  /* reviews */
   .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .rev{background:#fff;border-radius:22px;padding:30px;box-shadow:0 6px 22px rgba(110,42,72,.06)}
   .rev .stars{color:var(--gold);font-size:17px;letter-spacing:2px;margin-bottom:14px}
@@ -164,7 +156,6 @@
   .rev .nm{font-weight:600;font-size:15px}
   .rev .src{font-size:13px;color:var(--ink);opacity:.6}
 
-  /* addresses */
   .addr-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
   .addr-list{display:flex;flex-direction:column;gap:14px}
   .addr-main{background:#fff;border:1.5px solid var(--gold);border-radius:18px;padding:22px 24px;box-shadow:0 8px 24px rgba(110,42,72,.08)}
@@ -177,7 +168,6 @@
   .map .card-float{position:absolute;left:24px;right:24px;bottom:24px;background:rgba(253,244,240,.93);
     backdrop-filter:blur(6px);border-radius:16px;padding:18px 20px;border:1px solid rgba(201,162,75,.3)}
 
-  /* cta */
   .cta-sec{padding:96px 40px;position:relative;overflow:hidden;
     background:radial-gradient(120% 120% at 80% 0%,#4A1A30 0%,#2A1320 55%,#1C0E16 100%)}
   .cta-sec::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
@@ -193,7 +183,6 @@
     background:transparent;border:1.5px solid rgba(253,244,240,.4);padding:17px 28px;border-radius:999px;transition:border-color .2s}
   .btn-wa:hover{border-color:var(--gold)}
 
-  /* footer */
   footer{background:var(--ink);color:var(--ivory);padding:54px 40px 30px}
   .foot{display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between}
   .foot h5{font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
@@ -206,7 +195,6 @@
   .soc a:hover{border-color:var(--gold)}
   .copy{max-width:1200px;margin:36px auto 0;padding-top:22px;border-top:1px solid rgba(253,244,240,.12);font-size:13px;opacity:.5}
 
-  /* нажатие кнопок: подсветка */
   .btn-primary,.pill,.btn-ghost,.btn-gold,.btn-wa,.card-cta .mini,.chip{position:relative}
   .btn-primary:active,.pill:active,.card-cta .mini:active{transform:translateY(1px) scale(.97);
     box-shadow:0 0 0 5px rgba(201,162,75,.35),0 0 30px 4px rgba(226,161,182,.75),0 8px 20px rgba(226,161,182,.5)}
@@ -216,7 +204,6 @@
   .lit{animation:litpulse .55s ease-out}
   @keyframes litpulse{0%{box-shadow:0 0 0 0 rgba(201,162,75,.55),0 0 0 0 rgba(226,161,182,.6)}100%{box-shadow:0 0 0 18px rgba(201,162,75,0),0 0 40px 10px rgba(226,161,182,0)}}
 
-  /* floats */
   .float-wa{position:fixed;right:24px;bottom:24px;z-index:60;width:58px;height:58px;display:flex;align-items:center;justify-content:center;
     background:#25D366;border-radius:50%;box-shadow:0 10px 26px rgba(37,211,102,.45);transition:transform .2s;animation:bob 3s ease-in-out infinite}
   .float-wa:hover{transform:scale(1.08)}
@@ -226,7 +213,6 @@
     opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .3s,transform .3s;text-decoration:none}
   .float-top.show{opacity:1;pointer-events:auto;transform:none}
 
-  /* lightbox */
   .lightbox{display:none;position:fixed;inset:0;z-index:80;align-items:center;justify-content:center;
     background:rgba(42,34,39,.82);backdrop-filter:blur(6px);padding:5vh 5vw;cursor:zoom-out}
   .lightbox.open{display:flex}
@@ -259,7 +245,6 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section id="top" class="hero">
   <div class="hero-bg"><div class="hero-grad"></div></div>
   <canvas id="fx"></canvas>
@@ -285,7 +270,6 @@
   <div class="scroll-cue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div>
 </section>
 
-<!-- SERVICES -->
 <section id="services" class="sec" style="background:var(--ivory)">
   <div class="wrap">
     <div class="sec-head" data-rv>
@@ -332,7 +316,6 @@
   </div>
 </section>
 
-<!-- GALLERY -->
 <section id="gallery" class="sec" style="background:var(--rose-soft)">
   <div class="wrap">
     <div class="sec-head" data-rv>
@@ -344,7 +327,6 @@
   </div>
 </section>
 
-<!-- WHY -->
 <section id="why" class="sec" style="background:var(--ivory)">
   <div class="wrap">
     <div class="sec-head" data-rv><p class="kicker">Почему Fly Lashes</p><h2>Тебе будет спокойно</h2></div>
@@ -369,7 +351,6 @@
   </div>
 </section>
 
-<!-- REVIEWS -->
 <section id="reviews" class="sec" style="background:var(--rose-soft)">
   <div class="wrap">
     <div class="sec-head" data-rv><p class="kicker">Отзывы</p><h2>Что говорят гости</h2></div>
@@ -396,7 +377,6 @@
   </div>
 </section>
 
-<!-- ADDRESSES -->
 <section id="addresses" class="sec" style="background:var(--ivory)">
   <div class="wrap">
     <div class="sec-head" data-rv><p class="kicker">Адреса</p><h2>Пять студий по Москве</h2></div>
@@ -424,7 +404,6 @@
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta-sec">
   <div class="cta-in" data-rv>
     <p class="kicker">Запись онлайн</p>
@@ -440,7 +419,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="foot wrap">
     <div style="max-width:300px">
@@ -466,9 +444,8 @@
 <script>
 document.documentElement.classList.add('js');
 const PREVIEW = location.search.indexOf('preview') >= 0;
-/* ===== работы галереи. Чтобы добавить работу: положи фото в assets/works/ и впиши {img,label} ===== */
+
 const WORKS = [
-  // {img:'assets/works/1.jpg', label:'Объём 2D'},
 ];
 const PLACEHOLDERS = [
   {label:'Объём 2D',  g:'linear-gradient(150deg,#E2A1B6,#FBE9EE)', c:'#161214'},
@@ -501,33 +478,27 @@ const PLACEHOLDERS = [
   });
 })();
 
-/* lightbox */
 const lb=document.getElementById('lightbox'),lbStage=document.getElementById('lbStage');
 function openLightbox(node){const c=node.cloneNode(true);c.style.cssText='width:100%;height:100%;border-radius:18px;overflow:hidden;position:relative';lbStage.innerHTML='';lbStage.appendChild(c);lb.classList.add('open')}
 lb.addEventListener('click',()=>lb.classList.remove('open'));
 
-/* mobile menu */
 const burger=document.getElementById('burger'),mm=document.getElementById('mobileMenu');
 burger.addEventListener('click',()=>{mm.style.display=mm.style.display==='flex'?'none':'flex'});
 mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mm.style.display='none'));
 
-/* back to top */
 const ft=document.getElementById('floatTop');
 addEventListener('scroll',()=>{ft.classList.toggle('show',scrollY>600)},{passive:true});
 
-/* активный пункт навигации при скролле */
 const navMap={};
 document.querySelectorAll('.nav-links a[href^="#"]').forEach(a=>{const id=a.getAttribute('href').slice(1);if(id)navMap[id]=a});
 const spy=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){Object.values(navMap).forEach(a=>a.classList.remove('active'));const a=navMap[e.target.id];if(a)a.classList.add('active')}})},{rootMargin:'-45% 0px -50% 0px'});
 ['services','gallery','reviews','addresses'].forEach(id=>{const s=document.getElementById(id);if(s)spy.observe(s)});
 
-/* подсветка кнопок при клике */
 document.querySelectorAll('.btn-primary,.pill,.btn-ghost,.btn-gold,.btn-wa,.card-cta .mini,.chip').forEach(b=>{
   b.addEventListener('click',()=>{b.classList.remove('lit');void b.offsetWidth;b.classList.add('lit')});
   b.addEventListener('animationend',()=>b.classList.remove('lit'));
 });
 
-/* reveal on scroll (+ страховка: показать всё, если IO недоступен или подвис) */
 function revealAll(){document.querySelectorAll('[data-rv]').forEach(el=>el.classList.add('in'))}
 if(PREVIEW){revealAll();const h=document.querySelector('.hero');if(h)h.style.minHeight='auto'}
 else if(!('IntersectionObserver' in window)){revealAll()}
@@ -537,7 +508,6 @@ else{
   setTimeout(revealAll,3000);
 }
 
-/* count-up */
 const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target)}})},{threshold:.6});
 document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
 function countUp(el){
@@ -549,7 +519,6 @@ function countUp(el){
   requestAnimationFrame(step);
 }
 
-/* ===== hero bokeh ===== */
 const c=document.getElementById('fx'),x=c.getContext('2d');
 let W,H,boke=[],spark=[];
 function size(){const r=c.parentElement.getBoundingClientRect();W=c.width=r.width;H=c.height=r.height}
